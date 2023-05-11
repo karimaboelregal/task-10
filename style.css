@@ -1,0 +1,133 @@
+body {
+    direction: rtl;
+    width: 100%;
+}
+
+.container {
+    max-width: 1920px;
+}
+
+.max {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.nav-link {
+    color: black !important;
+}
+
+
+.circle-color {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+
+.purple {
+    background: #510B76;
+}
+
+.purple-filter {
+    filter: grayscale(100%) brightness(60%) sepia(50%) hue-rotate(-100deg) saturate(350%) contrast(1);
+}
+
+
+.green-filter {
+    filter: grayscale(100%) brightness(60%) sepia(300%) hue-rotate(50deg) saturate(350%);
+}
+
+.green {
+    background: #0B760F;
+}
+
+
+
+
+.button-rounded {
+    border-radius: 20px;
+    border: 1px solid grey;
+}
+
+
+#row-parent {
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.background-card {
+    position: absolute;
+    background: #E1D9E6;
+    width: 80%;
+    height: 100%;
+    top: 49%;
+    left: 50%;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0.2;
+}
+
+.background-card-2 {
+    position: absolute;
+    top:40%;
+    right:40%;
+    width: 70%;
+    height: 70%;
+    background: #E1D9E6;
+    border-radius: 20px;
+    opacity: 0.2;
+}
+
+
+@media (max-width: 768px) {
+    .hide-this {
+        overflow: hidden;
+    }
+}
+
+
+#row-parent .col-md-4 {
+    padding-bottom: 20px;
+}
+
+.card {
+    border-radius: 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 10px 20px;
+    height: 100%;
+}
+
+.card i {
+    background-color: whitesmoke;
+    border-radius: 15px;
+    padding: 40px;
+    width:fit-content;
+    color: orange;
+    font-size: 30px;
+    margin-bottom: 10px;
+
+}
+
+.card p {
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+
+
+@keyframes glowing {
+    0% {
+      box-shadow: 0 0 20px #FFBF00;
+    }
+    50% {
+      box-shadow: 0 0 35px #EADDCA;
+    }
+    100% {
+      box-shadow: 0 0 20px #FFEA00;
+    }
+}
+
+.custom-glow {
+    animation: glowing 1300ms infinite;
+}
