@@ -151,14 +151,14 @@
                 <div class="row">
                     <div class="col-md-5 hide-this">
                         <div class="background-card-2"></div>
-                        <img src="img-2.png" alt="" class="w-100" style="position: relative;"/>
+                        <img src="img-2.png" alt="" class="w-100" style="position: relative;" />
                     </div>
                     <div class="col-md-1"></div>
                     <div class="col-md-6  d-flex justify-content-center flex-column">
                         <h2>ﻦﻋ ةﺬﺒﻧ
                             ﻲﺠﻴﻠﺨﻟا ﺔﻳارد قوﺪﻨﺻ
                             ﻞﺧﺪﻟاو ﻮﻤﻨﻟا ﻢﻬﺳﺄﻟ</h2>
-                        <p>.ﺔﻴﻟﺎﻤﻟا قﻮﺳ ﺔﺌﻴﻫ ﻦﻣ ةردﺎﺼﻟا ﺔﻟواﺪﺘﻤﻟا ﺔﻳرﺎﻘﻌﻟا رﺎﻤﺜﺘﺳﺎﻟا ﻖﻳدﺎﻨﺻ تﺎﻤﻴﻠﻌﺗو ،يرﺎﻘﻌﻟا رﺎﻤﺜﺘﺳﺎﻟا
+                        <p id="main-text">.ﺔﻴﻟﺎﻤﻟا قﻮﺳ ﺔﺌﻴﻫ ﻦﻣ ةردﺎﺼﻟا ﺔﻟواﺪﺘﻤﻟا ﺔﻳرﺎﻘﻌﻟا رﺎﻤﺜﺘﺳﺎﻟا ﻖﻳدﺎﻨﺻ تﺎﻤﻴﻠﻌﺗو ،يرﺎﻘﻌﻟا رﺎﻤﺜﺘﺳﺎﻟا
                             ﻖﻳدﺎﻨﺻ ﺔﻤﻈﻧﺄﻟ ﺎﻘﻓو ﻞﻤﻌﻳ قوﺪﻨﺼﻟا .تاﺪﺣﻮﻟا ﺔﻠﻤﺤﻟ حﺎﺑرﺄﻟا ﻲﻓﺎﺻ ﻦﻣ )%90( ﻦﻋ ﻞﻘﻳ ﺎﻟ ﺎﻤﺑ ﻲﻌﺑر ﻞﻜﺸﺑ
                             حﺎﺑرا قوﺪﻨﺼﻟا عزﻮﻳ .ﻦﻴﻧاﻮﻘﻟاو ﺢﺋاﻮﻠﻟاو ،قوﺪﻨﺼﻟا مﺎﻜﺣأو طوﺮﺷ ﻲﻓ ةرﻮﻛﺬﻤﻟا ﺔﻴﺟاﺮﺘﺳﺎﻟا ﺐﺴﺤﺑ
                             ﻞﺧﺪﻠﻟ ةرﺪﻤﻟا ﺔﻳرﺎﻘﻌﻟا صﺮﻔﻟا ﻦﻣ ﺔﻋﻮﻤﺠﻣ ﻲﻓ رﺎﻤﺜﺘﺳﺎﻟا لﺎﻠﺧ ﻦﻣ ﻦﻳﺮﻤﺜﺘﺴﻤﻟا لﺎﻣ سأر ﻰﻠﻋ ﻞﺧد ﻖﻴﻘﺤﺗ
@@ -230,15 +230,50 @@
             <div class="col-md-9">
                 <div class="row" id="row-parent">
                     <div class="background-card"></div>
-                    
+
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="container" id="custom-modal" style="display:none">
+        <div class="row justify-content-center center-this">
+            <div class="col-4">
+                <div class="modalbox mx-auto">
+                    <h2 id="modal-title">Title</h2>
+                    <textarea type="textarea" id="modal-textarea" class="form-control h-75" readonly="true"></textarea>
+                    <div class="d-flex">
+                        <button class="btn btn-danger mt-3" onclick="closeModal();">close</button>
+                    </div>
+                </div>        
+            </div>
+        </div>
+    </div>
+
     <script>
-        var iconList = ["fa-regular fa-star", "fa-regular fa-face-smile", "fa-regular fa-face-smile", "fa-regular fa-dollar-sign", "fa-regular fa-face-smile", "fa-regular fa-thumbs-up"];
-        function addcard(ic) {
+        var paras = [
+            {
+                "para": "لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول استنكار  النشوة وتمجيد الألم نشأت بالفعل، وسأعرض لك التفاصيل لتكتشف حقيقة وأساس تلك السعادة البشرية، فلا أحد يرفض أو يكره أو يتجنب الشعور بالسعادة، ولكن بفضل هؤلاء الأشخاص الذين لا يدركون بأن السعادة لا بد أن نستشعرها بصورة أكثر عقلانية ومنطقية فيعرضهم هذا لمواجهة الظروف الأليمة",
+                "title": "ك4ن لا بد",
+                "icon": "fa-regular fa-star"
+            },
+            {
+                "para": "لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول استنكار  النشوة وتمجيد الألم نشأت بالفعل، وسأعرض لك التفاصيل لتكتشف حقيقة وأساس تلك السعادة البشرية، فلا أحد يرفض أو يكره أو يتجنب الشعور بالسعادة، ولكن بفضل هؤلاء الأشخاص الذين لا يدركون بأن السعادة لا بد أن نستشعرها بصورة أكثر عقلانية ومنطقية فيعرضهم هذا لمواجهة الظروف الأليمة",
+                "title": "ك3ن لا بد",
+                "icon": "fa-regular fa-star"
+            },
+            {
+                "para": "لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول استنكار  النشوة وتمجيد الألم نشأت بالفعل، وسأعرض لك التفاصيل ",
+                "title": "ك1ن لا بد",
+                "icon": "fa-regular fa-star"
+            },
+            {
+                "para": "لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول استنكار  النشوة وتمجيد الألم نشأت بالفعل، وسأعرض لك التفاصيل لتكتشف حقيقة وأساس تلك السعادة البشرية، فلا أحد يرفض أو يكره أو يتجنب الشعور بالسعادة، ولكن بفضل هؤلاء الأشخاص الذين لا يدركون بأن السعادة لا بد أن نستشعرها بصورة أكثر عقلانية ومنطقية فيعرضهم هذا لمواجهة الظروف الأليمة",
+                "title": "كن2 لا بد",
+                "icon": "fa-regular fa-star"
+            },
+        ]
+        function addcard(ic, para, title) {
 
             if (ic == null) {
                 ic = Math.floor((Math.random() * 6));
@@ -252,28 +287,60 @@
             const icon = document.createElement("i");
             icon.className = ic;
             const header = document.createElement("h4");
-            header.innerHTML = "كن لا بد";
+            header.innerHTML = title;
             const paragraph = document.createElement("p");
-            paragraph.innerHTML = "لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول استنكار  النشوة وتمجيد الألم نشأت بالفعل، وسأعرض لك التفاصيل لتكتشف حقيقة وأساس تلك السعادة البشرية، فلا أحد يرفض أو يكره أو يتجنب الشعور بالسعادة، ولكن بفضل هؤلاء الأشخاص الذين لا يدركون بأن السعادة لا بد أن نستشعرها بصورة أكثر عقلانية ومنطقية فيعرضهم هذا لمواجهة الظروف الأليمة";
 
 
+
+            
             card.append(icon, header, paragraph);
             col.append(card);
 
             const parent = document.getElementById("row-parent");
+            var newpara;
+            if (para.length > 120) {
+                newpara = trunctext(para);
+                button = document.createElement("button");
+                button.className = "btn purple text-light";
+                button.style.width = "fit-content";
+                button.innerHTML = "read more";
+                button.addEventListener("click", function() {
+                    openModal(title, para);
+            });
+                card.append(button);
+            } else {
+                newpara = para;
+            }
+
+            paragraph.innerHTML = newpara;
 
             parent.append(col);
         }
-        for(var i = 0; i < 6; i++) {
-            addcard(iconList[i]);
+
+        function openModal(title, text) {
+            document.getElementById("custom-modal").style.display = "block";
+            document.getElementById("modal-title").innerHTML = title;
+            document.getElementById("modal-textarea").value = text;
+            document.getElementsByTagName("body")[0].style.overflow = "hidden";
         }
-        
+
+        function closeModal() {
+            document.getElementById("custom-modal").style.display = "none";
+            document.getElementsByTagName("body")[0].style.overflow = "auto";
+        }
+
+        function trunctext(text, limit=120) {
+            if (text.length > limit) {
+                return text.substr(0,limit) + "...";
+            }
+            return text;
+        }
 
         function changecolor(color) {
             var alldivs = document.getElementsByTagName("div");
             var allbuttons = document.getElementsByTagName("button");
             var allimages = document.getElementsByTagName("img");
-            if(color == "green") {
+            if (color == "green") {
                 for (var i = 0; i < alldivs.length; i++) {
                     if (alldivs[i].classList.contains("purple")) {
                         alldivs[i].classList.replace("purple", "green");
@@ -308,6 +375,14 @@
                 }
 
             }
+        }
+
+        window.onload = function() {
+            for (var i = 0; i < 4; i++) {
+                addcard(paras[i].icon, paras[i].para, paras[i].title);
+            }
+            document.getElementById("main-text").innerHTML = trunctext(document.getElementById("main-text").innerHTML, 300);
+
         }
 
 
