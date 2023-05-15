@@ -35,14 +35,38 @@ body {
     background: #510B76;
 }
 
-.purple-filter {
-    filter: grayscale(100%) brightness(60%) sepia(35%) hue-rotate(-100deg) saturate(300%) contrast(1);
+.purple-filter img{
+    filter: grayscale(100%);
+    position: relative;
+}
+
+.shade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: soft-light;
+    opacity: 0.6;
+    
+}
+
+.purple-filter .shade {
+    background: #510B76;
 }
 
 
 .green-filter {
-    filter: grayscale(100%) brightness(60%) sepia(35%) hue-rotate(50deg) saturate(300%);
+    filter: grayscale(100%);
+    position: relative;
 }
+
+.green-filter .shade {
+    background: #0B760F;   
+}
+
+
+
 
 .green {
     background: #0B760F;

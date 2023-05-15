@@ -138,8 +138,9 @@
                     </p>
                 </div>
             </div>
-            <div class="col-md-4" style="padding: 0;">
-                <img src="img.png" alt="" class="img-fluid w-100 h-100 purple-filter" />
+            <div class="col-md-4 purple-filter" style="padding: 0;">
+                <img src="img.png" alt="" class="img-fluid w-100 h-100" />
+                <div class="shade"></div>
             </div>
         </div>
     </div>
@@ -348,15 +349,13 @@
                     if (alldivs[i].classList.contains("purple")) {
                         alldivs[i].classList.replace("purple", "green");
                     }
+                    if (alldivs[i].classList.contains("purple-filter")) {
+                        alldivs[i].classList.replace("purple-filter", "green-filter");
+                    }
                 }
                 for (var i = 0; i < allbuttons.length; i++) {
                     if (allbuttons[i].classList.contains("purple")) {
                         allbuttons[i].classList.replace("purple", "green");
-                    }
-                }
-                for (var i = 0; i < allimages.length; i++) {
-                    if (allimages[i].classList.contains("purple-filter")) {
-                        allimages[i].classList.replace("purple-filter", "green-filter");
                     }
                 }
             } else {
@@ -365,18 +364,15 @@
                     if (alldivs[i].classList.contains("green")) {
                         alldivs[i].classList.replace("green", "purple");
                     }
+                    if (alldivs[i].classList.contains("green-filter")) {
+                        alldivs[i].classList.replace("green-filter", "purple-filter");
+                    }
                 }
                 for (var i = 0; i < allbuttons.length; i++) {
                     if (allbuttons[i].classList.contains("green")) {
                         allbuttons[i].classList.replace("green", "purple");
                     }
                 }
-                for (var i = 0; i < allimages.length; i++) {
-                    if (allimages[i].classList.contains("green-filter")) {
-                        allimages[i].classList.replace("green-filter", "purple-filter");
-                    }
-                }
-
             }
         }
 
