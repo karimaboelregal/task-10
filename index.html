@@ -97,11 +97,11 @@
 
 
                             <li class="nav-item">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                <i class="fa-solid fa-magnifying-glass-plus" style="padding: 0;"></i>
                             </li>
 
 
-                            <li class="nav-item">
+                            <li class="nav-item my-auto">
                                 <span class="circle-color green" onclick="changecolor('green');"></span>
                                 <span class="circle-color purple" onclick="changecolor('purple');"></span>
                             </li>
@@ -165,6 +165,7 @@
                             ﻰﻟإ قوﺪﻨﺼﻟا فﺪﻬﻳ .”قوﺪﻨﺼﻟا“ ﺔﻴﻋﺮﺸﻟا ﻂﺑاﻮﻀﻟا ﻊﻣ ﻖﻓاﻮﺘﻣو ﻞﻔﻘﻣ لواﺪﺘﻣ يرﺎﻘﻋ رﺎﻤﺜﺘﺳا قوﺪﻨﺻ ﻦﻋ
                             ةرﺎﺒﻋ ﺖﻳر ﺔﻳارد قوﺪﻨﺻ
                         </p>
+                        <button class="btn purple text-light" style="width: fit-content;" id="readmore-main">Read more</button>
                     </div>
                 </div>
             </div>
@@ -276,8 +277,10 @@
         function addcard(ic, para, title) {
 
             if (ic == null) {
-                ic = Math.floor((Math.random() * 6));
-                ic = iconList[ic];
+                var i = Math.floor((Math.random() * 4));
+                ic = paras[i].icon;
+                para = paras[i].para;
+                title = paras[i].title;
             }
 
             const col = document.createElement("div");
@@ -381,7 +384,11 @@
             for (var i = 0; i < 4; i++) {
                 addcard(paras[i].icon, paras[i].para, paras[i].title);
             }
+            var longtext = document.getElementById("main-text").innerHTML; 
             document.getElementById("main-text").innerHTML = trunctext(document.getElementById("main-text").innerHTML, 300);
+            document.getElementById("readmore-main").addEventListener("click", function () {
+                openModal("Main text", longtext)
+            });
 
         }
 
